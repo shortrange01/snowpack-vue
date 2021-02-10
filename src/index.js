@@ -4,6 +4,8 @@ import App from "./App.vue";
 const app = createApp(App);
 app.mount("#app");
 
+import './assets/scss/style.scss';
+
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
 // Learn more: https://www.snowpack.dev/concepts/hot-module-replacement
 if (import.meta.hot) {

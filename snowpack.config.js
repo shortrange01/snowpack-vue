@@ -8,6 +8,7 @@ module.exports = {
     '@snowpack/plugin-vue',
     // '@snowpack/plugin-vue/plugin-tsx-jsx.js',
     '@snowpack/plugin-dotenv',
+    '@snowpack/plugin-sass'
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -18,10 +19,10 @@ module.exports = {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    // 
   },
   devOptions: {
-    /* ... */
+    open: 'chrome'
   },
   buildOptions: {
     /* ... */
