@@ -1,26 +1,12 @@
 <template>
-  <div class="App">
-    <header class="App-header">
-      <img src="/logo.svg" class="App-logo" alt="logo" />
-      <p>
-        Edit
-        <code>src/App.vue</code> and save to reload.
-      </p>
-      <p class="App-tsx">
-        <FooTsVue />
-        <Bar />
-      </p>
-      <a class="App-link" href="https://vuejs.org" target="_blank" rel="noopener noreferrer">{{
-        state.message
-      }}</a>
-    </header>
+  <div>
+    <Header />
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent, reactive} from 'vue';
-import FooTsVue from './components/FooTs.vue';
-import Bar from './components/Bar.vue';
+import Header from './components/Header.vue';
 
 interface State {
   message: string;
@@ -28,8 +14,7 @@ interface State {
 
 export default defineComponent({
   components: {
-    FooTsVue,
-    Bar,
+    Header
   },
   setup() {
     const state = reactive({
