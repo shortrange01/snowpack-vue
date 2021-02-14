@@ -1,5 +1,7 @@
 <template>
-    <header class="header">{{ state.title }}</header>
+    <header class="header">
+        <p>{{ state.title }}</p>
+    </header>
 </template>
 
 <script lang="ts">
@@ -22,11 +24,15 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100px;
     background: {
         color: #666;
     }
     color: #fff;
+    font-size: 2.8rem;
 }
 </style>
