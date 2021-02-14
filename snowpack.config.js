@@ -19,7 +19,7 @@ module.exports = {
     // "bundle": true,
   },
   packageOptions: {
-    // 
+    // knownEntrypoints: ['/node_modules/destyle.css/destyle.css']
   },
   devOptions: {
     open: 'chrome'
