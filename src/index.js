@@ -4,6 +4,7 @@ import App from "./App.vue";
 const app = createApp(App);
 app.mount("#app");
 
+import './assets/scss/destyle.css';
 import './assets/scss/style.scss';
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
