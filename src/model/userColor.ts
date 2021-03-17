@@ -3,6 +3,8 @@ export default class UserColor {
     errMsg: string = "";
 
     insertNewNumber = (colorCode: number | string): void => {
+        colorCode = this.convertColorCodeToNumber(colorCode);
+        this.errMsg = "";
         if (this.validateColorCodeMax(colorCode)) {
             this.errMsg = "カラーコードの最大値を超えた数字です";
             return;
@@ -15,6 +17,13 @@ export default class UserColor {
         if (this.colorList.length > 1) this.colorList.shift();
         this.colorList.push(convertedColorCode);
     };
+
+    private convertColorCodeToNumber(colorCode: number | string) {
+        if (typeof colorCode === "number" || Number.isNaN(Number(colorCode))) {
+            return colorCode;
+        }
+        return parseInt(colorCode, 10);
+    }
 
     private validateColorCodeMax(colorCode: number | string) {
         return typeof colorCode === "number" && colorCode > 16777215;
