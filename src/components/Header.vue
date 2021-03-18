@@ -5,21 +5,21 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive} from 'vue';
+import { defineComponent, reactive } from "vue";
 
 interface State {
-    title: string
+    title: string;
 }
-    
+
 export default defineComponent({
     setup() {
         const state = reactive<State>({
-            title: 'snowpack環境構築'
+            title: "Gradation Checker (snowpack practice)",
         });
-        
+
         return { state };
-    }
-})
+    },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +30,7 @@ export default defineComponent({
     width: 100%;
     height: 100px;
     background: {
-        color: #666;
+        color: #cbb;
     }
     color: #fff;
     font-size: 2.8rem;
